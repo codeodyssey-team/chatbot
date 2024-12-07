@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   database: "chatbot",
   password: "Sqlinobj?(no)",
 });
-
+ 
 // Randome user data hello
 let getRandomUser = () => {
   return [
@@ -18,21 +18,21 @@ let getRandomUser = () => {
   ];
 };
 
-let query = "INSERT INTO users (user_id, username, email, password) VALUES ?";
+// let query = "INSERT INTO users (user_id, username, email, password) VALUES ?";
 
-let data = [];
+// let data = [];
 
-for (let i = 1; i <= 100; i++) {
-  data.push(getRandomUser());
-}
+// for (let i = 1; i <= 100; i++) {
+//   data.push(getRandomUser());
+// }
 
-try {
-  connection.query(query, [data], (err, res) => {
-    if (err) throw err;
-    console.log(res);
-  });
-} catch (err) {
-  console.log(err);
-}
+// try {
+//   connection.query(query, [data], (err, res) => {
+//     if (err) throw err;
+//     console.log(res);
+//   });
+// } catch (err) {
+//   console.log(err);
+// }
 
-connection.end();
+// connection.end();
